@@ -20,4 +20,13 @@ public class Bullet : MonoBehaviour
         transform.Translate(_moveDirection * _speed * Time.deltaTime);  // When -transform--> always use Time.deltaTime
     }
 
+
+    private void OnTriggerEnter(Collider otherCollider)
+    {
+        if (otherCollider.TryGetComponent(out Block block))
+        {
+            block.Break();
+            Destroy(gameObject);
+        }
+    }
 }
