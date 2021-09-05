@@ -14,13 +14,13 @@ public class TowerBuilder : MonoBehaviour
 
     private void Start()
     {
-        Builder();
+        // Builder();      
     }
 
+    
     public List<Block> Builder()
     {
         _blocks = new List<Block>();
-
         Transform currentPoint = _buildPoint;
 
         for (int i = 0; i < _towerSize; i++)
@@ -40,7 +40,7 @@ public class TowerBuilder : MonoBehaviour
 
     private Vector3 GetBuildPoint(Transform currentSegment)
     {
-        return new Vector3(_buildPoint.position.x, currentSegment.position.y - 0.5f +
+        return new Vector3(_buildPoint.position.x, currentSegment.position.y +
             currentSegment.localScale.y / 2 + _block.transform.localScale.y / 2,
             _buildPoint.position.z);
     }
