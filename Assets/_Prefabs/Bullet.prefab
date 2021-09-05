@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 20
+  _bounceForce: 70
+  _bounceRadius: 100
 --- !u!135 &8338945317058167565
 SphereCollider:
   m_ObjectHideFlags: 0
